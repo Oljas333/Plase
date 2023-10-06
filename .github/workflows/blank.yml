@@ -1,0 +1,14 @@
+name: Pleace
+
+on:
+  workflow_dispatch: null
+
+jobs:
+  newman:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: matt-ball/newman-action@master
+        with:
+          collection: Test 2.postman_collection.json
+          environment: Test 2.postman_environment.json
